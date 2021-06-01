@@ -1,0 +1,11 @@
+####################################################
+Short description of different .gitlab-ci.yml* files
+####################################################
+
+0. .gitlab-ci.yml 			- this is always the last option.
+1. .gitlab-ci.only_docker.yml 		- allow to deploy to docker after manual commit to master. IP address of the aws instance must be 						specified manually. No minikube. Access by aws instance IP-address on port 8006
+2. .gitlab-ci.manually_minikube.yml 	- allow to deploy to minikube after manual commit to master branch. IP address of the aws instance must 					be specified manually. Access to AWS instance by localhost adter ssh tunneling, port as specified 						in variable.
+These two were before scripts 1, 2 written. So, all manipulations with minikube and previous deployments are in the text of .yml.
+Also no tests, no other branches but master branch.
+
+3. .gitlab-ci.script2.yml		- this yml is for use when renew antyrec app. It turns on aws machine etc, but does not deploy 						anterec pod 

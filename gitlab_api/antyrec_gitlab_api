@@ -1,0 +1,3 @@
+curl --header "PRIVATE-TOKEN:4-Ge1XF3s-jqytXDmBHm" "https://gitlab.com/api/v4/projects/25416058/variables"
+curl --request PUT --header "PRIVATE-TOKEN:4-Ge1XF3s-jqytXDmBHm" "https://gitlab.com/api/v4/projects/25416058/variables/MY_UNAME" --form "value=vblvbl133"
+

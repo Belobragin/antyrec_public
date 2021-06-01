@@ -1,0 +1,19 @@
+include LICENSE
+include OWNERS
+include *.md
+include *.txt
+include *.ini
+include setup.cfg
+
+exclude .gitignore
+exclude .gitreview
+exclude .articles
+
+global-exclude *.ipynb
+global-exclude *.py[co]
+global-exclude __pycache__
+global-exclude .*
+
+
+
+

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: antyrec
+  labels:
+    app: antyrec
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: antyrec
+  template:
+    metadata:
+      labels:
+        app: antyrec
+    spec:
+      containers:
+      - name: antyrec
+        image: registry.gitlab.com/vbelobragin/antyrec/master:bvv
+        ports:
+        - containerPort: 8006
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: antyrec
+spec:
+  type: LoadBalancer
+  selector:
+    app: antyrec
+  ports:
+    - protocol: TCP
+      port: 8006
+      targetPort: 8006
+---

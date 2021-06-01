@@ -1,0 +1,23 @@
+**/*.ipynb
+**/ipynb*
+**/__pycache__
+**/temp
+
+#virtual environment:
+lib*
+lib*/*
+bin
+bin/*
+include
+include/*
+pyvenv.cfg
+**/hardcode.py
+
+#training:
+opencv-anpr
+**/lp_data
+**/test_data
+
+#strange:
+share
+
